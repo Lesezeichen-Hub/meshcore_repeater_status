@@ -1,6 +1,6 @@
 # MeshCore Repeater Status
 
-Versioniertes Lesezeichen-Hub-Modul und eigenständige Web-App für strukturierte Repeater-Statusabfragen über einen MeshCore-Companion.
+Versioniertes Lesezeichen-Hub-Modul und eigenständige Web-App für strukturierte Repeater-Statusabfragen über einen MeshCore-Companion. Repeater können lokal gespeichert und als JSON gesichert werden.
 
 ## Ablauf
 
@@ -10,6 +10,8 @@ Versioniertes Lesezeichen-Hub-Modul und eigenständige Web-App für strukturiert
 4. Admin-Passwort des Repeaters eingeben.
 5. **Status abfragen** drücken.
 6. Die Anfrage läuft über das Mesh; Antwort oder Timeout wird angezeigt.
+
+Mit **Repeater speichern** bleibt ein Eintrag lokal im Browser erhalten. Über **Exportieren** entsteht eine JSON-Datei; **Importieren** übernimmt sie auf einem anderen Gerät.
 
 Der Repeater braucht keinen Laptop vor Ort. Die Firmware verwendet den bestehenden MeshCore-Statusrequest `REQ_TYPE_GET_STATUS`; der Kanalbot ist nicht erforderlich.
 

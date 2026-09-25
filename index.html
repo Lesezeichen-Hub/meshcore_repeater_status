@@ -7,12 +7,13 @@
   <meta name="description" content="MeshCore-Repeater-Status per Bluetooth abfragen.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
+  <style>.saved-actions{display:flex;gap:8px;margin-top:10px}.saved-actions button{min-height:38px;border:1px solid #1e426e;border-radius:4px;padding:0 12px;background:transparent;color:#1e426e;font-weight:700;cursor:pointer}.backup{margin-top:14px;padding:18px 20px}.backup .hint{margin:7px 0 0}</style>
   <title>MeshCore Repeater Status</title>
 </head>
 <body>
   <main class="shell">
     <header class="hero">
-      <p class="eyebrow">Lesezeichen-Hub Modul <span id="version">v1.0.0</span></p>
+      <p class="eyebrow">Lesezeichen-Hub Modul <span id="version">v1.1.0</span></p>
       <h1>Repeater<br>Status</h1>
       <p>Im Wald prüfen, ob ein entfernter Repeater über das Mesh antwortet.</p>
     </header>
@@ -25,10 +26,21 @@
     <section class="panel controls">
       <label for="repeater">Repeater auswählen</label>
       <select id="repeater" disabled><option>Erst Companion verbinden</option></select>
+      <div class="saved-actions">
+        <button id="saveRepeater" type="button" disabled>Repeater speichern</button>
+        <button id="removeRepeater" type="button" disabled>Entfernen</button>
+      </div>
       <label for="password">Admin-Passwort</label>
       <input id="password" type="password" autocomplete="off" placeholder="Passwort des Repeaters" disabled>
       <button id="statusButton" class="primary wide" type="button" disabled>Status abfragen</button>
       <p class="hint">Die Anfrage wird über den Companion ins Mesh geflutet. Es braucht keinen Laptop am Repeater.</p>
+    </section>
+
+    <section class="panel backup">
+      <span class="label">Repeater-Liste</span>
+      <p class="hint">Die Liste bleibt lokal im Browser. Für ein anderes Handy oder Backup als JSON exportieren.</p>
+      <div class="saved-actions"><button id="exportRepeaters" type="button">Exportieren</button><button id="importRepeaters" type="button">Importieren</button></div>
+      <input id="importFile" type="file" accept="application/json" hidden>
     </section>
 
     <section id="result" class="panel result" aria-live="polite">
