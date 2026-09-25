@@ -1,0 +1,11 @@
+{
+  "name": "MeshCore Repeater Status",
+  "short_name": "Repeater Status",
+  "description": "Entfernte MeshCore-Repeater per Companion und Bluetooth abfragen.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e9edf2",
+  "theme_color": "#172a46",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
