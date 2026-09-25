@@ -7,13 +7,13 @@
   <meta name="description" content="MeshCore-Repeater-Status per Bluetooth abfragen.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
-  <style>.saved-actions{display:flex;gap:8px;margin-top:10px}.saved-actions button{min-height:38px;border:1px solid #1e426e;border-radius:4px;padding:0 12px;background:transparent;color:#1e426e;font-weight:700;cursor:pointer}.backup{margin-top:14px;padding:18px 20px}.backup .hint{margin:7px 0 0}.notice{margin-top:14px;padding:14px 18px;border-radius:6px;border:1px solid #d5dbe3;background:#f4f6f8}.notice.ok{border-color:#8fc5a8;background:#e9f6ee;color:#145e3c}.notice.warn{border-color:#d9b86e;background:#fff8e3;color:#805f12}.notice.error{border-color:#dc9b91;background:#fff0ed;color:#8d2d24}.notice strong{display:block}.search{margin-top:10px}</style>
+  <style>.saved-actions{display:flex;gap:8px;margin-top:10px}.saved-actions button{min-height:38px;border:1px solid #1e426e;border-radius:4px;padding:0 12px;background:transparent;color:#1e426e;font-weight:700;cursor:pointer}.backup{margin-top:14px;padding:18px 20px}.backup .hint{margin:7px 0 0}.notice{margin-top:14px;padding:14px 18px;border-radius:6px;border:1px solid #d5dbe3;background:#f4f6f8}.notice.ok{border-color:#8fc5a8;background:#e9f6ee;color:#145e3c}.notice.warn{border-color:#d9b86e;background:#fff8e3;color:#805f12}.notice.error{border-color:#dc9b91;background:#fff0ed;color:#8d2d24}.notice strong{display:block}.search{margin-top:10px}.log-panel{margin-top:14px;padding:14px 18px}.log-panel summary{cursor:pointer;color:#1e426e;font-weight:700}.log{max-height:260px;overflow:auto;margin:12px 0 0;padding:12px;border-radius:4px;background:#16202d;color:#dce8f4;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}</style>
   <title>MeshCore Repeater Status</title>
 </head>
 <body>
   <main class="shell">
     <header class="hero">
-      <p class="eyebrow">Lesezeichen-Hub Modul <span id="version">v1.2.0</span></p>
+      <p class="eyebrow">Lesezeichen-Hub Modul <span id="version">v1.3.0</span></p>
       <h1>Repeater<br>Status</h1>
       <p>Im Wald prüfen, ob ein entfernter Repeater über das Mesh antwortet.</p>
     </header>
@@ -53,6 +53,8 @@
       <p id="resultText">Wähle einen Repeater und starte eine Statusabfrage.</p>
       <dl id="stats" class="stats" hidden></dl>
     </section>
+
+    <details class="panel log-panel"><summary>Verbindungslog</summary><pre id="log" class="log"></pre></details>
 
     <details class="help"><summary>Ablauf und Fehlerbilder</summary><p>Die App meldet zunächst, ob der Companion die Statusanfrage akzeptiert. Danach wartet sie bis zu 45 Sekunden auf den entfernten Repeater. „Gesendet, keine Antwort“ bedeutet: Hinweg oder Rückweg im Mesh fehlt, nicht automatisch einen Firmwarefehler.</p></details>
     <p id="support" class="support">Chrome oder Edge auf localhost/HTTPS verwenden. Andere MeshCore-Apps vorher trennen.</p>
