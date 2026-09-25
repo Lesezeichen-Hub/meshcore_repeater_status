@@ -11,7 +11,7 @@ Versioniertes Lesezeichen-Hub-Modul und eigenständige Web-App für strukturiert
 5. **Status abfragen** drücken.
 6. Die Anfrage läuft über das Mesh; Antwort oder Timeout wird angezeigt. Die BLE-Verbindung wird bei einem kurzen GATT-Abbruch automatisch wiederhergestellt.
 
-Mit **Repeater speichern** bleibt ein Eintrag lokal im Browser erhalten und erscheint künftig oben unter **Gespeichert**. Nur aktuell synchronisierte, noch nicht gespeicherte Geräte erscheinen darunter unter **Neu gefunden**. Über **Exportieren** entsteht eine JSON-Datei; **Importieren** übernimmt sie auf einem anderen Gerät.
+Mit **Repeater speichern** bleibt ein Eintrag lokal im Browser erhalten und erscheint oben unter **Gespeichert**. Nur aktuell synchronisierte, noch nicht gespeicherte Geräte erscheinen darunter unter **Neu gefunden**. Über **Exportieren** werden ausschließlich explizit gespeicherte oder importierte Einträge ausgegeben. Über **Importieren** übernimmt die App eine JSON-Liste auf einem anderen Gerät. Die v1.5-Liste startet bewusst getrennt von alten, automatisch befüllten Browserdaten.
 
 Der Repeater braucht keinen Laptop vor Ort. Die Firmware verwendet den bestehenden MeshCore-Statusrequest `REQ_TYPE_GET_STATUS`; der Kanalbot ist nicht erforderlich.
 

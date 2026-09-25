@@ -1,7 +1,7 @@
 const BLE_SERVICE = "6e400001-b5a3-f393-e0a9-e50e24dcca9e";
 const BLE_RX = "6e400002-b5a3-f393-e0a9-e50e24dcca9e";
 const BLE_TX = "6e400003-b5a3-f393-e0a9-e50e24dcca9e";
-const SAVED_KEY = "meshcore-repeater-status-list";
+const SAVED_KEY = "meshcore-repeater-status-list-v2";
 const CMD = { APP_START: 1, GET_CONTACTS: 4, DEVICE_QUERY: 22, SEND_LOGIN: 26, SEND_STATUS_REQ: 27 };
 const RESP = { ERROR: 1, CONTACTS_END: 4, CONTACT: 3, DEVICE_INFO: 13, SELF_INFO: 5, LOGIN_SUCCESS: 133, LOGIN_FAIL: 134, STATUS: 135 };
 const TYPE_REPEATER = 2;
