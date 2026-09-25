@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "MeshCore Repeater Status",
-  "description": "Versioniertes Lesezeichen-Hub-Modul und eigenständige Web-App zur Statusabfrage mit lokaler Repeater-Liste sowie JSON-Backup.",
+  "description": "Repeater-Statusabfrage mit lokaler Liste, Suche, JSON-Backup, BLE-Wiederverbindung und farbigen Zustandsmeldungen.",
   "updated_at": "2026-09-25"
 }

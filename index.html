@@ -7,13 +7,13 @@
   <meta name="description" content="MeshCore-Repeater-Status per Bluetooth abfragen.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
-  <style>.saved-actions{display:flex;gap:8px;margin-top:10px}.saved-actions button{min-height:38px;border:1px solid #1e426e;border-radius:4px;padding:0 12px;background:transparent;color:#1e426e;font-weight:700;cursor:pointer}.backup{margin-top:14px;padding:18px 20px}.backup .hint{margin:7px 0 0}</style>
+  <style>.saved-actions{display:flex;gap:8px;margin-top:10px}.saved-actions button{min-height:38px;border:1px solid #1e426e;border-radius:4px;padding:0 12px;background:transparent;color:#1e426e;font-weight:700;cursor:pointer}.backup{margin-top:14px;padding:18px 20px}.backup .hint{margin:7px 0 0}.notice{margin-top:14px;padding:14px 18px;border-radius:6px;border:1px solid #d5dbe3;background:#f4f6f8}.notice.ok{border-color:#8fc5a8;background:#e9f6ee;color:#145e3c}.notice.warn{border-color:#d9b86e;background:#fff8e3;color:#805f12}.notice.error{border-color:#dc9b91;background:#fff0ed;color:#8d2d24}.notice strong{display:block}.search{margin-top:10px}</style>
   <title>MeshCore Repeater Status</title>
 </head>
 <body>
   <main class="shell">
     <header class="hero">
-      <p class="eyebrow">Lesezeichen-Hub Modul <span id="version">v1.1.0</span></p>
+      <p class="eyebrow">Lesezeichen-Hub Modul <span id="version">v1.2.0</span></p>
       <h1>Repeater<br>Status</h1>
       <p>Im Wald prüfen, ob ein entfernter Repeater über das Mesh antwortet.</p>
     </header>
@@ -24,6 +24,8 @@
     </section>
 
     <section class="panel controls">
+      <label for="repeaterSearch">Repeater suchen</label>
+      <input id="repeaterSearch" class="search" type="search" placeholder="Name oder Public-Key-Präfix">
       <label for="repeater">Repeater auswählen</label>
       <select id="repeater" disabled><option>Erst Companion verbinden</option></select>
       <div class="saved-actions">
@@ -35,6 +37,8 @@
       <button id="statusButton" class="primary wide" type="button" disabled>Status abfragen</button>
       <p class="hint">Die Anfrage wird über den Companion ins Mesh geflutet. Es braucht keinen Laptop am Repeater.</p>
     </section>
+
+    <section id="notice" class="notice" aria-live="polite"><strong id="noticeTitle">Bereit</strong><span id="noticeText">Noch keine Verbindung aufgebaut.</span></section>
 
     <section class="panel backup">
       <span class="label">Repeater-Liste</span>

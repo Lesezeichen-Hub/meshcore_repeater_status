@@ -9,7 +9,7 @@ Versioniertes Lesezeichen-Hub-Modul und eigenständige Web-App für strukturiert
 3. Repeater auswählen.
 4. Admin-Passwort des Repeaters eingeben.
 5. **Status abfragen** drücken.
-6. Die Anfrage läuft über das Mesh; Antwort oder Timeout wird angezeigt.
+6. Die Anfrage läuft über das Mesh; Antwort oder Timeout wird angezeigt. Die BLE-Verbindung wird bei einem kurzen GATT-Abbruch automatisch wiederhergestellt.
 
 Mit **Repeater speichern** bleibt ein Eintrag lokal im Browser erhalten. Über **Exportieren** entsteht eine JSON-Datei; **Importieren** übernimmt sie auf einem anderen Gerät.
 
